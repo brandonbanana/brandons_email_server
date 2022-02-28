@@ -41,7 +41,7 @@ router.post("/", (req, res, next) => {
     from: ${name}
     email: ${email}
     phone: ${tel}
-    message: ${e}`,
+    message: ${message}`,
   };
 
   transporter.sendMail(mail, (err, data) => {
