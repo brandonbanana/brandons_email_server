@@ -30,7 +30,7 @@ router.get("/", (req, res, next) => {
 
 router.post("/", (req, res, next) => {
   console.log("body: ", req.body);
-  const { name, email, tel, message, date } = req.body;
+  const { name, email, tel, message } = req.body;
 
   //make mailable object
   const mail = {
@@ -41,7 +41,7 @@ router.post("/", (req, res, next) => {
     from: ${name}
     email: ${email}
     phone: ${tel}
-    message: ${message}`,
+    message: ${e}`,
   };
 
   transporter.sendMail(mail, (err, data) => {
